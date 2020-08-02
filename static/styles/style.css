@@ -1,0 +1,235 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-family: 'Roboto Mono', monospace;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+.gotop{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  z-index: 5;
+}
+
+.bgimg-1 {
+  background-color: black;
+  height: 100%;
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.icon-go {
+  position: absolute;
+  right: 2%;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 400px;
+  left: 30%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  font-weight: 900;
+  font-size: 50px;
+  color: #084c61;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+$colors: (fill: #a972cb,
+  pulse: #ef6eae,
+  close: #ff7f82,
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b);
+
+@each $button,
+$color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+
+
+.growth-bar {
+  background-color: #6c757d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+}
+
+.cards-list {
+  z-index: 0;
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+.card_1img{
+  width: 200px;
+  height: 200px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 0px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: #ffc857;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+.projects {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: inherit;
+  height: inherit;
+}
+
+.pro_box {
+  position: relative;
+  margin: 5px auto;
+  top: 50px;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.pro_box:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.contact {
+  position: relative;
+  top: 50px;
+  width: inherit;
+  height: inherit;
+  margin: 30px auto;
+}
+
+.foot {
+  background-color: black;
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
